@@ -24,6 +24,7 @@ Vue.use(VueMediaEmbed, { store })
 In this example we embed 3 players
 ```
 <vue-media-embed media-id="soundcloud://295067272" :auto-play="1" :allow-fullscreen="0"/>
+
 <vue-media-embed media-id="youtube://C6vinrXWxls" :auto-play="0" :allow-fullscreen="1"/>
 <vue-media-embed media-id="vimeo://70114668" :auto-play="0" :allow-fullscreen="0" />
 ```
@@ -55,6 +56,7 @@ see [docs](https://developers.soundcloud.com/docs/api/html5-widget#resources)
 
 ### Vimeo
 see [docs](https://developer.vimeo.com/player/embedding)
+
 | Property | Description| Default | Options |
 | -------- | -------- | -------- | -------- |
 | show-badge | enable or disable badge on the video | 0 | 1 |
@@ -66,6 +68,7 @@ see [docs](https://developer.vimeo.com/player/embedding)
 
 ### YouTube
 see [docs](https://developers.google.com/youtube/player_parameters)
+
 | Property | Description| Default | Options |
 | -------- | -------- | -------- | -------- |
 | color | Color theme | 'red' | white' |
