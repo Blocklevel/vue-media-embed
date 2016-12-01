@@ -38,7 +38,9 @@ When one of the players starts playing, any other players that were playing will
 | related | Show related content | 0 | 1 |
 
 ### SoundCloud
+
 see [docs](https://developers.soundcloud.com/docs/api/html5-widget#resources)
+
 | Property | Description| Default | Options |
 | -------- | -------- | -------- | -------- |
 | show-buying | Show/hide buy buttons | 0 | 1 |
