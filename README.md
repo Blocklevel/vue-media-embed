@@ -71,7 +71,7 @@ see [docs](https://developers.google.com/youtube/player_parameters)
 
 | Property | Description| Default | Options |
 | -------- | -------- | -------- | -------- |
-| color | Color theme | 'red' | white' |
+| color | Color theme | 'red' | 'white' |
 | controls | video player controls | 1 | 0 2
 | disable-keyboard | Keyboard controls | 0 | 1 |
 | start | Starts playing video in seconds | -1 | p ositive integer |
