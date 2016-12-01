@@ -82,4 +82,6 @@ see [docs](https://developers.google.com/youtube/player_parameters)
 | modest-branding | Minimize YouTube logo | 1 | 0 |
 | plays-inline | plays video inline for iOS. | 0 | 1 |
 | show-info | Displays information | 0 | 1 |
-...
+
+### Issues and features requests
+Any issues or would love to see another embed being supported? Add a [feature request](https://github.com/Blocklevel/vue-media-embed/issues)
