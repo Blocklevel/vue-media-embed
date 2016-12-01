@@ -23,8 +23,8 @@ Vue.use(VueMediaEmbed, { store })
 ### Example
 In this example we embed 3 players
 ```
-<vue-media-embed source="soundcloud://295067272" :auto-play="1" :allow-fullscreen="0"/>
-<vue-media-embed source="youtube://C6vinrXWxls" :auto-play="0" :allow-fullscreen="1"/>
+<vue-media-embed source="soundcloud://295067272" :auto-play="1" :allow-fullscreen="0" />
+<vue-media-embed source="youtube://C6vinrXWxls" :auto-play="0" :allow-fullscreen="1" />
 <vue-media-embed source="vimeo://70114668" :auto-play="0" :allow-fullscreen="0" />
 ```
 sources like http://vimeo.com/190613094 and https://www.youtube.com/watch?.. or https://youtu.be/{ID} are fine too
