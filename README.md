@@ -32,7 +32,7 @@ When one of the players starts playing, any other players that were playing will
 ### Overall props
 | Property | Description | Default| Example |
 | -------- | -------- | -------- | -------- |
-| source | Platform and ID of the media| required | vimeo://70114668
+| source | Platform and ID of the media | required | vimeo://70114668 |
 | auto-play | Start playing automatically when player is loaded | 0 | 1 |
 | auto-pause | Pause player when another player starts playing | 1 | 0 |
 | related | Show related content | 0 | 1 |
