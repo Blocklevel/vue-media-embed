@@ -1,4 +1,4 @@
-# vue media embed
+ vue media embed
 Embed for YouTube, Vimeo and SoundCloud
 This plugin requires [Vuex](https://www.npmjs.com/package/vuex)
 ### Features
@@ -23,22 +23,24 @@ Vue.use(VueMediaEmbed, { store })
 ### Example
 In this example we embed 3 players
 ```
-<vue-media-embed media-id="soundcloud://295067272" :auto-play="1" :allow-fullscreen="0"/>
-<vue-media-embed media-id="youtube://C6vinrXWxls" :auto-play="0" :allow-fullscreen="1"/>
-<vue-media-embed media-id="vimeo://70114668" :auto-play="0" :allow-fullscreen="0" />
+<vue-media-embed source="soundcloud://295067272" :auto-play="1" :allow-fullscreen="0" />
+<vue-media-embed source="youtube://C6vinrXWxls" :auto-play="0" :allow-fullscreen="1" />
+<vue-media-embed source="vimeo://70114668" :auto-play="0" :allow-fullscreen="0" />
 ```
-When one of the players starts playing, any other players that were playing will be paused
+sources like http://vimeo.com/190613094 and https://www.youtube.com/watch?.. or https://youtu.be/{ID} are fine too
 
 ### Overall props
 | Property | Description | Default| Example |
 | -------- | -------- | -------- | -------- |
-| source | Platform and ID of the media| required | vimeo://70114668
+| source | Platform and ID of the media | required | vimeo://70114668 |
 | auto-play | Start playing automatically when player is loaded | 0 | 1 |
 | auto-pause | Pause player when another player starts playing | 1 | 0 |
 | related | Show related content | 0 | 1 |
 
 ### SoundCloud
+
 see [docs](https://developers.soundcloud.com/docs/api/html5-widget#resources)
+
 | Property | Description| Default | Options |
 | -------- | -------- | -------- | -------- |
 | show-buying | Show/hide buy buttons | 0 | 1 |
@@ -53,6 +55,7 @@ see [docs](https://developers.soundcloud.com/docs/api/html5-widget#resources)
 
 ### Vimeo
 see [docs](https://developer.vimeo.com/player/embedding)
+
 | Property | Description| Default | Options |
 | -------- | -------- | -------- | -------- |
 | show-badge | enable or disable badge on the video | 0 | 1 |
@@ -64,9 +67,10 @@ see [docs](https://developer.vimeo.com/player/embedding)
 
 ### YouTube
 see [docs](https://developers.google.com/youtube/player_parameters)
+
 | Property | Description| Default | Options |
 | -------- | -------- | -------- | -------- |
-| color | Color theme | 'red' | white' |
+| color | Color theme | 'red' | 'white' |
 | controls | video player controls | 1 | 0 2
 | disable-keyboard | Keyboard controls | 0 | 1 |
 | start | Starts playing video in seconds | -1 | p ositive integer |
@@ -78,4 +82,6 @@ see [docs](https://developers.google.com/youtube/player_parameters)
 | modest-branding | Minimize YouTube logo | 1 | 0 |
 | plays-inline | plays video inline for iOS. | 0 | 1 |
 | show-info | Displays information | 0 | 1 |
-...
+
+### Issues and features requests
+Any issues or would love to see another embed being supported? Add a [feature request](https://github.com/Blocklevel/vue-media-embed/issues)
