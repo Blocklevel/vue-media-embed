@@ -13,10 +13,10 @@ export default class YouTube extends Player {
     this.player = new Player(this.el, this.props)
   }
   getCurrentTime () {
-    return this.player.getCurrentTime()
+    return this.player && typeof this.player.getCurrentTime === 'function' ? this.player.getCurrentTime() : 0
   }
   getDuration () {
-    if (!this.totalTime) this.totalTime = this.player.getDuration()
+    if (!this.totalTime && typeof this.player.getDuration === 'function') this.totalTime = this.player.getDuration()
     return super.getDuration()
   }
   seekTo (time, pauseAfterSeek) {

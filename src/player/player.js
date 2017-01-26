@@ -35,10 +35,13 @@ export default class Player {
   setChanged (state) {
     this.isBuffering = state === PlayerState.BUFFERING
     if (!this.isBuffering) this.state = state
-    this.onChange()
+    if (this.onChange !== null) this.onChange()
   }
   seekTo (time, pauseAfterSeek) {}
-  dispose () {}
+  dispose () {
+    this.onReady = null
+    this.onChange = null
+  }
   play () {}
   pause () {}
   onLoaded (player) {}

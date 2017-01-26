@@ -10,6 +10,7 @@ import PlayerState from './const/player-state'
 const install = (Vue, options = {}) => {
   const { store } = options
   store.registerModule(PACKAGE.name, module)
+
   Vue.component(PACKAGE.name, {
     template,
     mixins: [ props ],
@@ -49,7 +50,7 @@ const install = (Vue, options = {}) => {
       onPlayerReady ({ target }) {
         this.status = this.player.state
         const stored = this.getFromStore()
-        if (stored && stored.currentTime) {
+        if (stored && stored.currentTime > 0) {
           this.player.seekTo(stored.currentTime, stored.status !== PlayerState.PLAYING)
         }
         this.dispatch()
