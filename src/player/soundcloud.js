@@ -1,5 +1,5 @@
 import Player from './player'
-import PlayerState from './../const/player-state'
+import PlayerState from './../component/player/player-state'
 
 export default class SoundCloud extends Player {
   events = null
@@ -39,6 +39,7 @@ export default class SoundCloud extends Player {
     iframe.setAttribute('scrolling', 'no')
     iframe.setAttribute('frameborder', 'no')
     iframe.setAttribute('src', src)
+
     this.el.appendChild(iframe)
     this.player = new Player(iframe)
     this.events = Player.Events
@@ -84,7 +85,7 @@ export default class SoundCloud extends Player {
   }
   onEnded ({ currentPosition, loadedProgress, relativePosition }) {
     this.setCurrentTime(currentPosition)
-    this.setChanged(PlayerState.PAUSED)
+    this.setChanged(PlayerState.ENDED)
   }
   onProgress ({ currentPosition, loadedProgress, relativePosition }) {
     this.setCurrentTime(currentPosition)

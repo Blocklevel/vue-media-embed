@@ -1,11 +1,11 @@
 import * as events from './events'
-import PlayerState from './../const/player-state'
+import PlayerState from './../component/player/player-state'
 
 export default {
   [events.CHANGED] (state, payload) {
-    const { id, totalTime, currentTime, isBuffering, status, autoPause } = payload
+    const { id, totalTime, currentTime, isBuffering, status, autoPause, seekTime } = payload
     if (!state.players[id]) {
-      state.players = { ...state.players, [id]: {autoPause: autoPause, isBuffering: isBuffering, action: '', currentTime: currentTime, totalTime: totalTime, status: status} }
+      state.players = { ...state.players, [id]: {autoPause, isBuffering, action: '', currentTime, totalTime, status, seekTime} }
     }
 
     state.players[id].totalTime = totalTime
@@ -13,6 +13,8 @@ export default {
     state.players[id].status = status
     state.players[id].isBuffering = isBuffering
     state.players[id].autoPause = autoPause
+    state.players[id].seekTime = seekTime
+
 
     if ('action' in payload) state.players[id].action = payload.action
 

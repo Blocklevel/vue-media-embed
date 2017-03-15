@@ -1,5 +1,5 @@
 import getScript from './../util/get-script'
-import PlayerState from './../const/player-state'
+import PlayerState from './../component/player/player-state'
 export default class Player {
   props = null
   el = null

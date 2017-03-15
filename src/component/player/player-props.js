@@ -1,5 +1,9 @@
 export default {
   props: {
+    seekTo: {
+      type: Number,
+      required: false
+    },
     source: {
       type: String,
       required: true

@@ -1,5 +1,5 @@
 import Player from './player'
-import PlayerState from './../const/player-state'
+import PlayerState from './../component/player/player-state'
 
 export default class YouTube extends Player {
   pauseAfterSeek = false
