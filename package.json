@@ -1,6 +1,6 @@
 {
   "name": "vue-media-embed",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "media embed for youtube vimeo and soundcloud ",
   "main": "dist/vue-media-embed.js",
   "files": [
